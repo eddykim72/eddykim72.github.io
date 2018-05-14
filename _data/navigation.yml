@@ -7,7 +7,7 @@ main:
   - title: "POSTS"
     url: https://mmistakes.github.io/minimal-mistakes/about/  
   - title: "ABOUT"
-    url: https://eddykim72.github.io/_pages/about
+    url: https://eddykim72.github.io/_pages/index.html
 
 docs:
   - title: Getting Started
