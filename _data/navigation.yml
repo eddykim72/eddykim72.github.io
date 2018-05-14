@@ -2,16 +2,12 @@
 main:
   - title: "HOME"
     url: https://eddykim72.github.io
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  - title: "PORTFOLIO"
+  - title: "WORKS"
     url: /collection-archive/
-  - title: "ABOUT"
+  - title: "POSTS"
     url: https://mmistakes.github.io/minimal-mistakes/about/  
-  - title: "SITEMAP"
-    url: /sitemap/
-  - title: "LINKS"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  - title: "ABOUT"
+    url: https://eddykim72.github.io/_pages/About/index.html
 
 docs:
   - title: Getting Started
