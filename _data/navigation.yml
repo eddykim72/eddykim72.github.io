@@ -3,9 +3,9 @@ main:
   - title: "HOME"
     url: https://eddykim72.github.io
   - title: "WORKS"
-    url: /collection-archive/
+    url: /works-archive/
   - title: "POSTS"
-    url: https://mmistakes.github.io/minimal-mistakes/about/  
+    url: /year-archive/
   - title: "ABOUT"
     url: /about/
 
