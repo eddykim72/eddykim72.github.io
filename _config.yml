@@ -23,14 +23,14 @@ description              : "Embedded Bit Works"
 url                      : "https://eddykim72.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : "/assets/images/teaser.png"
+teaser                   : #"/assets/images/teaser.png"
 #premalink                : "/:categories/:title/"
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:
   provider               : "disqus" #, "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
   disqus:
-    shortname            : eddykim-site # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : #eddykim-site # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -135,6 +135,7 @@ author:
 include:
   - .htaccess
   - _pages
+  - _notes
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -250,25 +251,37 @@ compress_html:
 collections:
   works:
     output: true
-    permalink: /:works/:path/
+    permalink: /:collection/:path/
 
 # Defaults
 defaults:
   # _posts
   - scope:
       path: ""
+      type: about
+    values:
+      layout: single
+      author_profile: false
+      read_time: false
+      comments: false
+      share: true
+      related: false
+  # _posts
+  - scope:
+      path: ""
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       read_time: true
       comments: true
       share: true
       related: true
-  # _pages
+  # _works
   - scope:
       path: ""
-      types: pages
+      types: works
     values:
       layout: single
-      author_profile: true
+      author_profile: false
+      share: true
