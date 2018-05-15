@@ -12,7 +12,7 @@
 
 theme                    : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "ko-KR"
@@ -193,25 +193,6 @@ sass:
   sass_dir: _sass
   style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
-# Headers
-excerpt: "나야나"
-header:
-  teaser: /assets/images/header_image.jpg
-#  image_description: "Embedded Works !!!"
-#  overlay_color: "#333"
-#  caption: "Look at ME "
-#  show_overlay_excerpt: "overlay"
-#  excerpt: "진ㅉ짜 ??"
-#  cta_label: "Learn More"
-#  cta_url: "http://google.co.kr"
-
-# Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: #Asia/Seoul
-
-
 # Plugins (previously gems:)
 plugins:
   - jekyll-paginate
@@ -265,6 +246,11 @@ compress_html:
   ignore:
     envs: development
 
+# Collections
+collections:
+  works:
+    output: true
+    permalink: /:works/:path/
 
 # Defaults
 defaults:
@@ -279,17 +265,10 @@ defaults:
       comments: true
       share: true
       related: true
-  # pages
+  # _pages
   - scope:
       path: ""
-      type: pages
+      types: pages
     values:
       layout: single
       author_profile: true
-  # _docs
-  - scope:
-      path: ""
-      type: docs
-    values:
-      sidebar:
-        nav: "docs"

@@ -1,8 +1,8 @@
 ---
-title: Works
+title: Notes
 layout: collection
-permalink: /works-archive/
-collection: works
+permalink: /notes/
+collection: notes
 entries_layout: grid
 classes: wide
 ---
