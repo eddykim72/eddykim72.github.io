@@ -6,7 +6,6 @@ tags:
   - C
   - volatile
 ---
-
 A volatile object is one whose value might change spontaneously. That is, when you declare an object to be volatile, you’re telling the compiler that the object might change state even though no statements in the program appear to change it.
 
 Compilers can optimize accesses to nonvolatile objects by reading an object’s value into a CPU register, working with that register for a while, and eventually writing the value in the register back to the object. Compilers aren’t permitted to do this sort of optimization with volatile objects. Every time the source program says to read from or write to a volatile object, the compiled code must do so.
