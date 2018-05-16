@@ -1,0 +1,454 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.11.2 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>How to Use C’s volatile Keyword | B.I.T.W.O.R.K.S</title>
+<meta name="description" content="Embedded Bit Works">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="B.I.T.W.O.R.K.S">
+<meta property="og:title" content="How to Use C’s volatile Keyword">
+<meta property="og:url" content="http://localhost:4000/_notes/2018-05-15-C-volatile-keyword.html">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/_notes/2018-05-15-C-volatile-keyword.html">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Eddy Kim",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="B.I.T.W.O.R.K.S Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">B.I.T.W.O.R.K.S</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://eddykim72.github.io" >HOME</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/works/" >WORKS</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/notes/" >NOTES</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/posts/" >POSTS</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/about/" >ABOUT</a>
+            </li>
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="/_notes" itemprop="item"><span itemprop="name">_notes</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">How to Use C's volatile Keyword</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="How to Use C’s volatile Keyword">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">How to Use C’s volatile Keyword
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h1 id="how-to-use-cs-volatile-keyword"><strong>How to Use C’s volatile Keyword</strong></h1>
+
+<p>Wed, 2007-11-07 21:07 – webmasterby <a href="http://www.embeddedgurus.net/stack-overflow">Nigel Jones</a></p>
+
+<p>The proper use of C’s volatile keyword is poorly understood by many programmers. This is not surprising, as most C texts dismiss it in a sentence or two. This article will teach you the proper way to do it.</p>
+
+<ul>
+  <li>Have you experienced any of the following in your C or C++ embedded code?</li>
+  <li>Code that works fine–until you enable compiler optimizations</li>
+  <li>Code that works fine–until interrupts are enabled</li>
+  <li>Flaky hardware drivers</li>
+  <li>RTOS tasks that work fine in isolation–until some other task is spawned</li>
+</ul>
+
+<p>If you answered yes to any of the above, it’s likely that you didn’t use the C keyword volatile. You aren’t alone. The use of volatile is poorly understood by many programmers. Unfortunately, most books about the C programming language dismiss volatile in a sentence or two.</p>
+
+<p>C’s volatile keyword is a qualifier that is applied to a variable when it is declared. It tells the compiler that the value of the variable may change at any time–without any action being taken by the code the compiler finds nearby. The implications of this are quite serious. However, before we examine them, let’s take a look at the syntax.</p>
+
+<h2 id="volatile-keyword-syntax">volatile keyword syntax</h2>
+
+<p>To declare a variable volatile, include the keyword volatile before or after the data type in the variable definition. For instance both of these declarations will declare foo to be a volatile integer:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>volatile int foo;
+int volatile foo;
+</code></pre></div></div>
+
+<p>Now, it turns out that pointers to volatile variables are very common, especially with memory-mapped I/O registers. Both of these declarations declare pReg to be a pointer to a volatile unsigned 8-bit integer:</p>
+
+<p><code class="highlighter-rouge">volatile uint8_t * pReg;  uint8_t volatile * pReg;</code></p>
+
+<p>Volatile pointers to non-volatile data are very rare (I think I’ve used them once), but I’d better go ahead and give you the syntax:</p>
+
+<p><code class="highlighter-rouge">int * volatile p;</code></p>
+
+<p>And just for completeness, if you really must have a volatile pointer to a volatile variable, you’d write:</p>
+
+<p><code class="highlighter-rouge">int volatile * volatile p;</code></p>
+
+<p>Incidentally, for a great explanation of why you have a choice of where to place volatile and why you should place it after the data type (for example, int volatile * foo), read Dan Sak’s column “Top-Level cv-Qualifiers in Function Parameters” (Embedded Systems Programming, February 2000, p. 63).</p>
+
+<p>Finally, if you apply volatile to a struct or union, the entire contents of the struct/union are volatile. If you don’t want this behavior, you can apply the volatile qualifier to the individual members of the struct/union.</p>
+
+<h2 id="proper-use-of-volatile">Proper use of volatile</h2>
+
+<p>A variable should be declared volatile whenever its value could change unexpectedly. In practice, only three types of variables could change:</p>
+
+<ol>
+  <li>Memory-mapped peripheral registers</li>
+  <li>Global variables modified by an interrupt service routine</li>
+  <li>Global variables accessed by multiple tasks within a multi-threaded application</li>
+</ol>
+
+<p>We’ll talk about each of these cases in the sections that follow.</p>
+
+<h3 id="peripheral-registers">Peripheral registers</h3>
+
+<p>Embedded systems contain real hardware, usually with sophisticated peripherals. These peripherals contain registers whose values may change asynchronously to the program flow. As a very simple example, consider an 8-bit status register that is memory mapped at address 0×1234. It is required that you poll the status register until it becomes non-zero. The naive and incorrect implementation is as follows:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>uint8_t * pReg = (uint8_t *) 0x1234; 
+// Wait for register to become non-zero
+while (*pReg == 0) { } // Do something else
+</code></pre></div></div>
+
+<p>This will almost certainly fail as soon as you turn compiler optimization on, since the compiler will generate assembly language that looks something like this:</p>
+
+<p><code class="highlighter-rouge">  mov ptr, #0x1234 </code></p>
+
+<p><code class="highlighter-rouge">mov a, @ptr </code></p>
+
+<p><code class="highlighter-rouge">loop: </code></p>
+
+<p>​	<code class="highlighter-rouge">bz loop</code></p>
+
+<p>The rationale of the optimizer is quite simple: having already read the variable’s value into the accumulator (on the second line of assembly), there is no need to reread it, since the value will always be the same. Thus, in the third line, we end up with an infinite loop. To force the compiler to do what we want, we modify the declaration to:</p>
+
+<p><code class="highlighter-rouge">uint8_t volatile * pReg = (uint8_t volatile *) 0x1234;</code></p>
+
+<p>The assembly language now looks like this:</p>
+
+<p><code class="highlighter-rouge">  mov ptr, #0x1234 loop: mov a, @ptr bz loop</code></p>
+
+<p>The desired behavior is achieved.</p>
+
+<p>Subtler problems tend to arise with registers that have special properties. For instance, a lot of peripherals contain registers that are cleared simply by reading them. Extra (or fewer) reads than you are intending can cause quite unexpected results in these cases.Interrupt service routinesInterrupt service routines often set variables that are tested in mainline code. For example, a serial port interrupt may test each received character to see if it is an ETX character (presumably signifying the end of a message). If the character is an ETX, the ISR might set a global flag. An incorrect implementation of this might be:</p>
+
+<p><code class="highlighter-rouge">int etx_rcvd = FALSE; void main()  { ...  while (!ext_rcvd)  { // Wait }  ... } interrupt void rx_isr(void)  { ...  if (ETX == rx_char)  { etx_rcvd = TRUE; }  ... }</code></p>
+
+<p>With compiler optimization turned off, this code might work. However, any half decent optimizer will “break” the code. The problem is that the compiler has no idea that etx_rcvd can be changed within an ISR. As far as the compiler is concerned, the expression !ext_rcvd is always true, and, therefore, you can never exit the while loop. Consequently, all the code after the while loop may simply be removed by the optimizer. If you are lucky, your compiler will warn you about this. If you are unlucky (or you haven’t yet learned to take compiler warnings seriously), your code will fail miserably. Naturally, the blame will be placed on a “lousy optimizer.”</p>
+
+<p>The solution is to declare the variable etx_rcvd to be volatile. Then all of your problems (well, some of them anyway) will disappear.</p>
+
+<h3 id="multi-threaded-applications">Multi-threaded applications</h3>
+
+<p>Despite the presence of queues, pipes, and other scheduler-aware communications mechanisms in real-time operating systems, it is still fairly common for two tasks to exchange information via a shared memory location (that is, a global). Even as you add a preemptive scheduler to your code, your compiler has no idea what a context switch is or when one might occur. Thus, another task modifying a shared global is conceptually identical to the problem of interrupt service routines discussed previously. So all shared global variables should be declared volatile. For example, this is asking for trouble:</p>
+
+<p><code class="highlighter-rouge">int cntr; void task1(void)  { cntr = 0;  while (cntr == 0)  { sleep(1); }  ... } void task2(void)  { ... cntr++;  sleep(10);  ... }</code></p>
+
+<p>This code will likely fail once the compiler’s optimizer is enabled. Declaring cntr to be volatile is the proper way to solve the problem.</p>
+
+<h2 id="final-thoughts">Final thoughts</h2>
+
+<p>Some compilers allow you to implicitly declare all variables as volatile. Resist this temptation, since it is essentially a substitute for thought. It also leads to potentially less efficient code.</p>
+
+<p>Also, resist the temptation to blame the optimizer or turn it off. Modern optimizers are so good that I cannot remember the last time I came across an optimization bug. In contrast, I come across failures by programmers to use volatile with depressing frequency.</p>
+
+<p>If you are given a piece of flaky code to “fix,” perform a grep for volatile. If grep comes up empty, the examples given here are probably good places to start looking for problems.This article was published in the July 2001 issue of <a href="http://www.embedded.com/mag.htm">Embedded Systems Programming</a>. If you wish to cite the article in your own work, you may find the following MLA-style information helpful:Jones, Nigel. “Introduction to the Volatile Keyword” Embedded Systems Programming, July 2001</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#c" class="page__taxonomy-item" rel="tag">C</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#volatile" class="page__taxonomy-item" rel="tag">volatile</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#notes" class="page__taxonomy-item" rel="tag">Notes</a>
+    
+    </span>
+  </p>
+
+
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=How+to+Use+C%27s+volatile+Keyword%20http%3A%2F%2Flocalhost%3A4000%2F_notes%2F2018-05-15-C-volatile-keyword.html" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2F_notes%2F2018-05-15-C-volatile-keyword.html" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2F_notes%2F2018-05-15-C-volatile-keyword.html" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2F_notes%2F2018-05-15-C-volatile-keyword.html" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <div id="results" class="results"></div></div>
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+    
+    
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Eddy Kim. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  </body>
+</html>
