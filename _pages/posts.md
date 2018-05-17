@@ -1,5 +1,5 @@
 ---
-title: "P.O.S.T.S"
+title: Posts
 permalink: /posts/
 layout: posts
 ---

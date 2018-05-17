@@ -1,14 +1,14 @@
 # main links
 main:
-  - title: "0x0 HOME"
+  - title: "HOME"
     url: https://eddykim72.github.io
-  - title: "0x1 WORKS"
+  - title: "WORKS"
     url: /works/
-  - title: "0x2 NOTES"
+  - title: "NOTES"
     url: /notes/    
-  - title: "0x3 POSTS"
+  - title: "POSTS"
     url: /posts/
-  - title: "0x4 ABOUT"
+  - title: "ABOUT"
     url: /about/
 
 note-menu:

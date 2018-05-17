@@ -1,5 +1,5 @@
 ---
-title: "W.O.R.K.S"
+title: "Works"
 layout: collection
 permalink: /works/
 collection: works

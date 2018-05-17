@@ -1,10 +1,7 @@
 ---
-title: "N.O.T.E.S"
-layout: collection
+title: notes
 permalink: /notes/
-collection: notes
-entries_layout: list
-classes: wide
+layout: posts
 ---
 
-Sample document listing for the collection `Notes`.
+Sample document listing for the collection `_Works`.

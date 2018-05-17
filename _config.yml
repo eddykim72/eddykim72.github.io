@@ -112,7 +112,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "eddykim72"
+  github           :
   gitlab           :
   google_plus      :
   keybase          :
@@ -135,8 +135,6 @@ author:
 include:
   - .htaccess
   - _pages
-  - _notes
-  - _works
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -281,7 +279,7 @@ defaults:
       author_profile: false
       read_time: true
       comments: true
-      share: false
+      share: true
       related: true
   # _about
   - scope:
