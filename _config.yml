@@ -135,8 +135,8 @@ author:
 include:
   - .htaccess
   - _pages
-  - _notes
-  - _works
+  - works
+  - notes
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
