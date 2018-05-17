@@ -1,14 +1,14 @@
 ---
-title: "Works"
+title: "W.O.R.K.S"
 layout: collection
 permalink: /works/
 collection: works
 entries_layout: grid
 classes: wide
 excerpt: "Foo Bar design system including logo mark, website design, and branding applications."
-header:
-  image: /assets/images/header-image.jpg
-  teaser: /assets/images/header-image.jpg
+#header:
+#  image: /assets/images/header-image.jpg
+#  teaser: /assets/images/header-image.jpg
 sidebar:
   - title: "Role"
     image: http://placehold.it/350x250

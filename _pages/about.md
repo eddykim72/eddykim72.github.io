@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "A.B.O.U.T"
 permalink: /about/
 toc: false
 author_profile: true

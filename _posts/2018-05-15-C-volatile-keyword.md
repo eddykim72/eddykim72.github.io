@@ -1,7 +1,7 @@
 ---
 title: "How to Use C's volatile Keyword"
 categories:
-  - Notes
+  - posts
 tags:
   - C
   - volatile

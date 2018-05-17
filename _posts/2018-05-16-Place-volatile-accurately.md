@@ -1,7 +1,7 @@
 ---
 title: "Place Volatile Accurately"
 categories:
-  - Notes
+  - posts
 tags:
   - C
   - volatile

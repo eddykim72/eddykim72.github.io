@@ -1,12 +1,10 @@
 ---
-title: Notes
+title: "N.O.T.E.S"
 layout: collection
 permalink: /notes/
 collection: notes
-entries_layout: grid
+entries_layout: list
 classes: wide
-sidebar:
-    nav: "note-menu"
 ---
 
-Sample document listing for the collection `_Works`.
+Sample document listing for the collection `Notes`.
