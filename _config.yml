@@ -28,7 +28,7 @@ teaser                   : #"/assets/images/teaser.png"
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : "disqus" #, "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
+  provider               : "staticman_v2" #, "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
   disqus:
     shortname            : #eddykim-site # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
