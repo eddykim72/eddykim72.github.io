@@ -3,19 +3,17 @@ title: "W.O.R.K.S"
 layout: collection
 permalink: /works/
 collection: works
-entries_layout: grid
+entries_layout: list
 classes: wide
-excerpt: "Foo Bar design system including logo mark, website design, and branding applications."
-#header:
-#  image: /assets/images/header-image.jpg
-#  teaser: /assets/images/header-image.jpg
 sidebar:
-  - title: "Role"
-    image: http://placehold.it/350x250
+  - title: "BitWorks Co."
+    image: /assets/images/BitWorks_180x180.png
     image_alt: "logo"
-    text: "Designer, Front-End Developer"
-  - title: "Responsibilities"
-    text: "Reuters try PR stupid commenters should isn't a business model"
+    text: "Embedded Solution Builder"
+  - title: "Eun Kwon, Kim"
+    text: "Technical Director"
+  - title: "eMail : "
+    text: "eddy@bitworks.co.kr"
 gallery:
   - url: /assets/images/header-image.jpg
     image_path: assets/images/header-image.jpg

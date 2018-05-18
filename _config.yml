@@ -135,8 +135,8 @@ author:
 include:
   - .htaccess
   - _pages
-  - works
-  - notes
+  - _works
+  - _notes
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -251,6 +251,9 @@ compress_html:
 # Collections
 collections:
   works:
+    output: true
+    permalink: /:collection/:path/
+  notes:
     output: true
     permalink: /:collection/:path/
 
