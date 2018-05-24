@@ -12,11 +12,11 @@ main:
     url: /about/
 
 menu_notes:
-  - title: C 언어
+  - title: 0x0 C 언어
 #    children:
 #      - title: "C언어"
     url: /notes/clang/
-  - title: 임베디드 인터페이스
+  - title: 0x1 임베디드 인터페이스
 #    children:
 #      - title: "임베디드"
     url: /notes/embedded/

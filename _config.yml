@@ -254,13 +254,7 @@ collections:
   notes:
     output: true
     permalink: /:collection/:path/
-  notes_clang:
-    output: true
-    permalink: /:collection/:path/
-  notes_embedded:
-    output: true
-    permalink: /:collection/:path/    
-
+ 
 # Defaults
 defaults:
   # _works
@@ -278,7 +272,7 @@ defaults:
     values:
       layout: single
       author_profile: false
-      share: true         
+      share: true
   # _posts
   - scope:
       path: ""
