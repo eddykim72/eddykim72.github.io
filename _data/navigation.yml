@@ -5,7 +5,7 @@ main:
   - title: "/WORKS"
     url: /works/
   - title: "/NOTES"
-    url: /notes/    
+    url: /notes/
   - title: "/POSTS"
     url: /posts/
   - title: "/ABOUT"
@@ -13,12 +13,10 @@ main:
 
 menu_notes:
   - title: C 언어
-    children:
-      - title: "C언어 키워드"
-        url: /notes/CLanguage/
-      - title: "Structure"
-        url: /docs/structure/
-  - title: Embedded
-    children:
-      - title: "키워드"
-        url: /notes/Embedded/
+#    children:
+#      - title: "C언어"
+    url: /notes/clang/
+  - title: 임베디드 인터페이스
+#    children:
+#      - title: "임베디드"
+    url: /notes/embedded/
