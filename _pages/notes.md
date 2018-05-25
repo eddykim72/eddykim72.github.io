@@ -5,6 +5,7 @@ permalink: /notes/
 #collection: notes
 #entries_layout: list
 #classes: wide
+share: false
 sidebar:
     nav: "menu_notes"
 ---
