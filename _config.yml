@@ -22,7 +22,7 @@ name                     : "BitWorks Co."
 description              : "Embedded Bit Works"
 url                      : "https://eddykim72.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "eddykim72/eddykim72"  ## GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "eddykim72/eddykim72.github.io"  ## GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : #"/assets/images/teaser.png"
 premalink                : "/:categories/:title/"
 breadcrumbs              : true # true, false (default)
