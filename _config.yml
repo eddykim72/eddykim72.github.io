@@ -100,7 +100,7 @@ author:
   avatar           : "/assets/images/bio-photo.jpg"
   bio              : "The less The More"
   location         : "Seoul"
-  email            : "eddykim72@outlook.com"
+  email            : "eddy@bitworks.co.kr"
   uri              :
   home             : "http://bitworks.co.kr" # null (default), "absolute or relative url to link to author home"
   bitbucket        :
@@ -109,7 +109,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "eddykim72"
+  github           : "eddykim72.github.io"
   gitlab           :
   google_plus      :
   keybase          :
