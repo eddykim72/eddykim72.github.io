@@ -2,6 +2,7 @@
 title: "C언어 연구"
 permalink: /notes/clang/
 share: false
+comments: false
 sidebar:
     nav: "menu_notes"
 ---

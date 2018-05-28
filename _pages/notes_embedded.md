@@ -2,6 +2,7 @@
 title: "임베디드 인터페이스 (Embedded Interfaces)"
 permalink: /notes/embedded/
 share: false
+comments: false
 sidebar:
     nav: "menu_notes"
 ---
