@@ -16,15 +16,15 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "B.I.T.W.O.R.K.S"
+title                    : "BITWORKS"
 title_separator          : "|"
-name                     : "Eddy Kim"
+name                     : "BitWorks Co."
 description              : "Embedded Bit Works"
 url                      : "https://eddykim72.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "eddykim72/eddykim72.github.io"  ## GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : #"/assets/images/teaser.png"
-#premalink                : "/:categories/:title/"
+premalink                : "/:categories/:title/"
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:
@@ -39,24 +39,21 @@ comments:
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
 staticman:
-  allowedFields          : # ['name', 'email', 'url', 'message']
-  branch                 : # "master"
-  commitMessage          : # "New comment."
-  filename               : # comment-{@timestamp}
-  format                 : # "yml"
-  moderation             : # true
-  path                   : # "/_data/comments/{options.slug}" (default)
-  requiredFields         : # ['name', 'email', 'message']
+  allowedFields          : #['name', 'email', 'url', 'message']
+  branch                 : "master"
+  commitMessage          : #"New comment."
+  filename               : #comment-{@timestamp}
+  format                 : #"yml"
+  moderation             : #true
+  path                   : #"/_data/comments/{options.slug}" # (default)
+  requiredFields         : #['name', 'email', 'message']
   transforms:
-    email                : # "md5"
+    email                : #"md5"
   generatedFields:
     date:
-      type               : # "date"
+      type               : #"date"
       options:
-        format           : # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
-reCaptcha:
-  siteKey                :
-  secret                 :
+        format           : #"iso8601"  # (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : true #, false (default)
@@ -273,6 +270,7 @@ defaults:
       layout: single
       author_profile: false
       share: false
+      comments: true
   # _posts
   - scope:
       path: ""

@@ -1,10 +1,6 @@
 ---
 title: "How to Use C's volatile Keyword"
-categories:
-  - posts
-tags:
-  - C
-  - volatile
+comments: true
 ---
 Wed, 2007-11-07 21:07 – webmasterby [Nigel Jones](http://www.embeddedgurus.net/stack-overflow)
 
