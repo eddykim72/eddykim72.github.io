@@ -28,7 +28,7 @@ premalink                : "/:categories/:title/"
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : "staticman_v2" #"disqus" #, "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
+  provider               : #"staticman_v2" #"disqus" #, "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
   disqus:
     shortname            : #"eddykim72-github-io" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
