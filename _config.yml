@@ -45,7 +45,7 @@ staticman:
   filename               : comment-{@timestamp}
   format                 : "yml"
   moderation             : true
-  path                   : "/_data/comments/{options.slug}" # (default)
+  path                   : "/_comments/{options.slug}" # (default)
   requiredFields         : ['name', 'message'] #['name', 'email', 'message']
   transforms:
     email                : "md5"
