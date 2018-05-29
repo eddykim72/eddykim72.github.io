@@ -10,7 +10,7 @@ comments: false
 header:
   overlay_image: /assets/images/header_notes.jpg
   overlay_filter: rgba(0,0,0,0.1)
-excerpt: '연락주세요.'  
+excerpt: '개발 노트'
 sidebar:
     nav: "menu_notes"
 ---

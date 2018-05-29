@@ -1,16 +1,15 @@
 ---
-title: "W.O.R.K.S"
+title: "WORKS"
 permalink: /works/
 toc: false
 author_profile: true
 header:
   overlay_image: /assets/images/header_works.jpg
   overlay_filter: rgba(0,0,0,0.1)
-excerpt: '연락주세요.'    
+excerpt: '개발 및 프로젝트 연혁'
 ---
 <br/>
 
-History
 
 # <br/>2018
 
