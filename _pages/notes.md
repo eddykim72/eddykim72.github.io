@@ -1,5 +1,5 @@
 ---
-title: "N.O.T.E.S"
+title: "NOTES"
 #layout: collection
 permalink: /notes/
 #collection: notes
@@ -7,6 +7,10 @@ permalink: /notes/
 #classes: wide
 share: false
 comments: false
+header:
+  overlay_image: /assets/images/header_notes.jpg
+  overlay_filter: rgba(0,0,0,0.1)
+excerpt: '연락주세요.'  
 sidebar:
     nav: "menu_notes"
 ---

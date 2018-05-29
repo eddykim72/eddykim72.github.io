@@ -1,8 +1,12 @@
 ---
-title: "A.B.O.U.T"
+title: "ABOUT"
 permalink: /about/
 toc: false
 author_profile: false
+header:
+  overlay_image: /assets/images/header_about.jpg
+  overlay_filter: rgba(0,0,0,0.1)
+excerpt: '연락주세요.'  
 sidebar:
   - title: "BitWorks Co."
     image: /assets/images/BitWorks_180x180.png

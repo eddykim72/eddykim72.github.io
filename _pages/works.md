@@ -3,6 +3,10 @@ title: "W.O.R.K.S"
 permalink: /works/
 toc: false
 author_profile: true
+header:
+  overlay_image: /assets/images/header_works.jpg
+  overlay_filter: rgba(0,0,0,0.1)
+excerpt: '연락주세요.'    
 ---
 <br/>
 
