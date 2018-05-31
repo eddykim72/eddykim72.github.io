@@ -6,7 +6,7 @@ author_profile: true
 header:
   overlay_image: /assets/images/header_works.jpg
   overlay_filter: rgba(0,0,0,0.1)
-excerpt: '개발 및 프로젝트 연혁'
+excerpt: '개발 및 프로젝트 실적<br /><br />'
 ---
 <br/>
 
