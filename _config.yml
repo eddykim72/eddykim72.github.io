@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "BITWORKS"
+title                    : "비트웍스"
 title_separator          : "|"
 name                     : "비트웍스 BitWorks Co."
 description              : "비트웍스(BitWorks) 임베디드 소프트웨어"
