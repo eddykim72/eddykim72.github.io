@@ -1,7 +1,5 @@
 # main links
 main:
-  - title: "/HOME"
-    url: http://www.bitworks.co.kr  #https://eddykim72.github.io
   - title: "/WORKS"
     url: /works/
   - title: "/NOTES"
